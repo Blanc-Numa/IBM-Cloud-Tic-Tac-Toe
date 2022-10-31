@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: foo
+spec:
+  containers:
+    - name: whatever
+      image: index.docker.io/blancnuma/ibm-cloud-tic-tac-toe:version1
+      imagePullPolicy: Always
+      command: [ "echo", "SUCCESS" ]
+  imagePullSecrets:
+    - name: myregistrykey
